@@ -4,7 +4,7 @@ import { Title } from 'components/Section/Section.styled';
 const HomePage = () => {
   return (
     <Container>
-      <Title>Phonebook manager, welcome!</Title>
+      <Title>Phonebook manager, register or log in please!</Title>
     </Container>
   );
 };
