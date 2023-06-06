@@ -1,5 +1,6 @@
-import { Label } from 'components/ContactForm/ContactForm.styled';
+import { Button, Label } from 'components/ContactForm/ContactForm.styled';
 import { Input } from 'components/Filter/Filter.styled';
+import { Form } from 'components/LoginForm/LoginForm.styled';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
 
@@ -12,7 +13,7 @@ export const RegisterForm = () => {
 
     dispatch(
       register({
-        name: form.elements.email.value,
+        name: form.elements.name.value,
         email: form.elements.email.value,
         password: form.elements.password.value,
       })
@@ -21,9 +22,9 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
+    <Form onSubmit={handleSubmit}>
       <Label>
-        Email
+        Name
         <Input type="text" name="name" />
       </Label>
       <Label>
@@ -34,7 +35,7 @@ export const RegisterForm = () => {
         Password
         <Input type="password" name="password" />
       </Label>
-      <button type="submit">Register</button>
-    </form>
+      <Button type="submit">Register</Button>
+    </Form>
   );
 };

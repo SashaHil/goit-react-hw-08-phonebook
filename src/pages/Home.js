@@ -1,11 +1,12 @@
-import { Container } from 'components/Layout/Layout.styled';
 import { Title } from 'components/Section/Section.styled';
+import { Text } from './Home.styled';
 
 const HomePage = () => {
   return (
-    <Container>
-      <Title>Phonebook manager, register or log in please!</Title>
-    </Container>
+    <>
+      <Title>Phonebook</Title>
+      <Text>Register or Log in please!</Text>
+    </>
   );
 };
 

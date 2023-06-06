@@ -28,12 +28,15 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 300px;
 `;
 
 export const Button = styled.button`
   padding: 5px 10px;
 
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: #2196f3;
   color: #ffffff;
