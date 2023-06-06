@@ -33,18 +33,11 @@ const ContactsPage = () => {
       <ContactForm />
 
       {isLoading && <Loader />}
-      {contacts.length === 0 &&
-        !isLoading &&
-        !error &&
-        alert('Your phonebook is empty')}
 
       {contacts.length !== 0 && (
         <div>
           <Filter />
-          {getFilteredContacts.length === 0 &&
-            !isLoading &&
-            alert('You have no contact with this name')}
-          <ContactList />
+          {getFilteredContacts.length !== 0 && <ContactList />}
         </div>
       )}
 
