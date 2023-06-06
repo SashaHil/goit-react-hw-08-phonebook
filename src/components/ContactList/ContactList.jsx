@@ -6,7 +6,7 @@ import {
   selectFilteredContacts,
   selectIsLoading,
 } from 'redux/contacts/selectors';
-import { ListItem, Name } from './ContactList.styled';
+import { ListItem, Text } from './ContactList.styled';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -27,8 +27,8 @@ export const ContactList = () => {
         {filteredContacts.map(({ id, name, number }) => {
           return (
             <ListItem key={id}>
-              <Name>{name}: </Name>
-              <p>{number} </p>
+              <Text>{name}: </Text>
+              <Text>{number} </Text>
               <Button
                 disabled={isLoading}
                 type="button"

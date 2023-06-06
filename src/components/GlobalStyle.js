@@ -9,8 +9,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  background-color: rgba(33, 243, 215, 0.6);
+  
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(https://st.depositphotos.com/3322093/4547/i/950/depositphotos_45475147-stock-photo-yellow-pages-phone-book.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 code {
@@ -33,4 +40,6 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+
 `;

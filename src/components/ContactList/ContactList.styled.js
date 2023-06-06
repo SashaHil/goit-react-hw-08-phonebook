@@ -7,6 +7,7 @@ export const ListItem = styled.li`
   margin-bottom: 10px;
 `;
 
-export const Name = styled.p`
+export const Text = styled.p`
   font-weight: 650;
+  color: white;
 `;

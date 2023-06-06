@@ -16,7 +16,14 @@ export const Container = styled.div`
   border: 1px solid black;
   border-radius: 6px;
 
-  background-color: rgba(255, 252, 53, 0.9);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(https://static8.depositphotos.com/1029554/813/i/950/depositphotos_8138619-stock-photo-old-style-phone-over-yellow.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   box-shadow: 3px 5px 5px grey;
 `;

@@ -29,6 +29,7 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 10px;
   min-width: 300px;
+  color: white;
 `;
 
 export const Button = styled.button`
