@@ -9,7 +9,7 @@ export const Label = styled.label`
 
 export const Input = styled.input`
   @media screen and (min-width: 320px) {
-    min-width: 220px;
+    min-width: 225px;
   }
 
   @media screen and (min-width: 768px) {
