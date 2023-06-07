@@ -1,8 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-width: 520px;
-  min-height: 500px;
+  @media screen and (min-width: 320px) {
+    min-width: 250px;
+    min-height: 400px;
+
+    padding: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 520px;
+    min-height: 500px;
+
+    padding: 40px 20px;
+  }
 
   position: absolute;
   top: 50%;
@@ -11,8 +22,6 @@ export const Container = styled.div`
 
   margin-left: auto;
   margin-right: auto;
-
-  padding: 40px 20px;
 
   border: 1px solid black;
   border-radius: 6px;

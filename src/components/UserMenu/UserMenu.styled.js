@@ -1,13 +1,31 @@
 import styled from 'styled-components';
 
 export const LogOutComponent = styled.div`
+  @media screen and (min-width: 320px) {
+    margin-left: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-left: 0;
+  }
+
   display: flex;
   align-items: center;
   gap: 10px;
 `;
 
 export const Button = styled.button`
-  padding: 5px 10px;
+  @media screen and (min-width: 320px) {
+    padding: 5px;
+
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 10px;
+
+    font-size: 16px;
+  }
 
   margin-left: auto;
   margin-right: auto;

@@ -2,6 +2,18 @@ import styled from 'styled-components';
 import { NavLink as NavLinkComponent } from 'react-router-dom';
 
 export const NavLink = styled(NavLinkComponent)`
+  @media screen and (min-width: 320px) {
+    padding: 5px;
+
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 10px;
+
+    font-size: 16px;
+  }
+
   margin-left: 5px;
   margin-bottom: 10px;
   padding: 5px 10px;

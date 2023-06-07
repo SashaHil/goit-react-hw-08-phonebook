@@ -12,11 +12,27 @@ export const ListItem = styled.li`
 `;
 
 export const Text = styled.p`
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   font-weight: 650;
   color: white;
 `;
 
 export const Name = styled.p`
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   font-weight: 650;
 
   color: white;
@@ -25,6 +41,14 @@ export const Name = styled.p`
 `;
 
 export const Number = styled.p`
+  @media screen and (min-width: 320px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   font-weight: 650;
 
   color: white;
@@ -33,7 +57,17 @@ export const Number = styled.p`
 `;
 
 export const Button = styled.button`
-  padding: 5px 10px;
+  @media screen and (min-width: 320px) {
+    padding: 5px;
+
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 10px;
+
+    font-size: 16px;
+  }
 
   margin-left: auto;
 

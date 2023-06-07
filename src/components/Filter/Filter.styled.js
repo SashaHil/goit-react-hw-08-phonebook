@@ -8,7 +8,13 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  min-width: 300px;
+  @media screen and (min-width: 320px) {
+    min-width: 220px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 300px;
+  }
 
   margin-bottom: 15px;
 

@@ -17,6 +17,14 @@ export const ErrorMessage = styled(FormikErrorMessage)`
 `;
 
 export const Field = styled(FormikField)`
+  @media screen and (min-width: 320px) {
+    min-width: 220px;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-width: 300px;
+  }
+
   border-right: none;
   border-bottom: 2px solid rgb(33, 150, 243);
   border-left: none;
@@ -40,6 +48,14 @@ export const Field = styled(FormikField)`
 `;
 
 export const Label = styled.label`
+  @media screen and (min-width: 320px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -48,7 +64,17 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
-  padding: 5px 10px;
+  @media screen and (min-width: 320px) {
+    padding: 5px;
+
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 5px 10px;
+
+    font-size: 16px;
+  }
 
   margin-bottom: 10px;
   margin-left: auto;
