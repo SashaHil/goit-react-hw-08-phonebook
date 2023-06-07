@@ -1,5 +1,4 @@
 import { Layout } from './Layout/Layout';
-// import { Section } from './Section/Section';
 import { Route, Routes } from 'react-router-dom';
 import { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';

@@ -10,6 +10,8 @@ export const Label = styled.label`
 export const Input = styled.input`
   min-width: 300px;
 
+  margin-bottom: 15px;
+
   border-right: none;
   border-bottom: 2px solid rgb(33, 150, 243);
   border-left: none;
