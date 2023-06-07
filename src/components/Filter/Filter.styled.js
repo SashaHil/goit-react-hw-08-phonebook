@@ -8,7 +8,6 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  /* margin-bottom: 30px; */
   min-width: 300px;
 
   outline: transparent;

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  min-width: 500px;
+  min-width: 520px;
+  min-height: 500px;
 
   position: absolute;
   top: 50%;
@@ -18,8 +19,8 @@ export const Container = styled.div`
 
   background-image: linear-gradient(
       to right,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
     ),
     url(https://static8.depositphotos.com/1029554/813/i/950/depositphotos_8138619-stock-photo-old-style-phone-over-yellow.jpg);
   background-repeat: no-repeat;

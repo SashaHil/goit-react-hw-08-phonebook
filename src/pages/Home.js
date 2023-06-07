@@ -1,11 +1,19 @@
 import { Title } from 'components/Section/Section.styled';
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { Text } from './Home.styled';
 
 const HomePage = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <>
       <Title>Phonebook</Title>
-      <Text>Register or Log in please!</Text>
+      {isLoggedIn ? (
+        <Text>Your book manager :)</Text>
+      ) : (
+        <Text>Register or Log in please!</Text>
+      )}
     </>
   );
 };

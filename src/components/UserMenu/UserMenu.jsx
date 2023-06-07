@@ -1,4 +1,4 @@
-import { Button } from 'components/ContactForm/ContactForm.styled';
+import { Button } from 'components/UserMenu/UserMenu.styled';
 import { Text } from 'components/ContactList/ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from 'redux/auth/operations';

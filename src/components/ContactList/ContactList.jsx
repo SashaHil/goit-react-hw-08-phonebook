@@ -1,4 +1,4 @@
-import { Button } from 'components/ContactForm/ContactForm.styled';
+import { Button, Contact } from 'components/ContactList/ContactList.styled';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
@@ -6,7 +6,7 @@ import {
   selectFilteredContacts,
   selectIsLoading,
 } from 'redux/contacts/selectors';
-import { ListItem, Text } from './ContactList.styled';
+import { ListItem, Name, Number } from './ContactList.styled';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
@@ -27,8 +27,10 @@ export const ContactList = () => {
         {filteredContacts.map(({ id, name, number }) => {
           return (
             <ListItem key={id}>
-              <Text>{name}: </Text>
-              <Text>{number} </Text>
+              <Contact>
+                <Name>{name}: </Name>
+                <Number>{number} </Number>
+              </Contact>
               <Button
                 disabled={isLoading}
                 type="button"
