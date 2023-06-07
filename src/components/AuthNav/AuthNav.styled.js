@@ -3,11 +3,10 @@ import { NavLink as NavLinkComponent } from 'react-router-dom';
 
 export const NavLink = styled(NavLinkComponent)`
   margin-left: 5px;
+  margin-bottom: 10px;
   padding: 5px 10px;
 
   text-decoration: none;
-
-  margin-bottom: 10px;
 
   background-color: #2196f3;
   color: #ffffff;

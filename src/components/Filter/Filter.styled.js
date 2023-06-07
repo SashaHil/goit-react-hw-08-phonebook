@@ -10,9 +10,24 @@ export const Label = styled.label`
 export const Input = styled.input`
   min-width: 300px;
 
-  outline: transparent;
+  border-right: none;
+  border-bottom: 2px solid rgb(33, 150, 243);
+  border-left: none;
+  border-top: none;
+
+  outline: none;
+
+  background-color: transparent;
+
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: white;
 
   &:focus {
-    border: 2px solid rgba(33, 243, 215, 0.6);
+    border-bottom: 2px solid rgba(33, 243, 215, 0.6);
+    border-left: none;
+    border-top: none;
+
+    outline: none;
   }
 `;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const ListItem = styled.li`
   display: flex;
   align-items: center;
-  justify-content: space-around;
   gap: 10px;
   margin: 15px 0;
 
@@ -19,18 +18,24 @@ export const Text = styled.p`
 
 export const Name = styled.p`
   font-weight: 650;
+
   color: white;
+
   text-align: center;
 `;
 
 export const Number = styled.p`
   font-weight: 650;
+
   color: white;
+
   text-align: center;
 `;
 
 export const Button = styled.button`
   padding: 5px 10px;
+
+  margin-left: auto;
 
   background-color: #2196f3;
   color: #ffffff;
