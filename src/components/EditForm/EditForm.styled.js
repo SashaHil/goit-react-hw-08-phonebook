@@ -12,12 +12,20 @@ export const Overlay = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(0, 0, 0, 0.767);
+  background-color: rgba(0, 0, 0, 0.4);
 
   padding: 20px;
 `;
 
 export const Modal = styled.div`
+  @media screen and (min-width: 320px) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+
   position: relative;
 
   border-radius: 10px;
@@ -31,8 +39,6 @@ export const Modal = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
-  padding: 40px;
-
   max-width: 100%;
 `;
 
@@ -41,6 +47,26 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+`;
+
+export const Label = styled.label`
+  @media screen and (min-width: 320px) {
+    font-size: 14px;
+
+    min-width: 205px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+
+    min-width: 300px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  color: white;
 `;
 
 export const BtnClose = styled.button`

@@ -1,4 +1,3 @@
-import { Label } from 'components/ContactForm/ContactForm.styled';
 import { Input } from 'components/Filter/Filter.styled';
 import { useDispatch } from 'react-redux';
 import { AdditionalLoginRegisterFiled } from 'components/LoginForm/LoginForm.styled';
@@ -6,7 +5,7 @@ import { CgUser, CgPhone, CgCloseO } from 'react-icons/cg';
 import { Button } from 'components/ContactList/ContactList.styled';
 import { editContact } from 'redux/contacts/operations';
 import { useEffect, useState } from 'react';
-import { BtnClose, Form, Modal, Overlay } from './EditForm.styled';
+import { BtnClose, Form, Label, Modal, Overlay } from './EditForm.styled';
 
 export const EditForm = ({ contactId, name, number, isCloseModal }) => {
   const dispatch = useDispatch();
