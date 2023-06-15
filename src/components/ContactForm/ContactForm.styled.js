@@ -10,6 +10,7 @@ export const Form = styled(FormikForm)`
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding-top: 80px;
 `;
 
 export const ErrorMessage = styled(FormikErrorMessage)`
@@ -95,4 +96,10 @@ export const Button = styled.button`
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   }
+`;
+
+export const AdditionalFormFiled = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;

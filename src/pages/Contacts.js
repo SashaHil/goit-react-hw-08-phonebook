@@ -1,8 +1,9 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
+import { EditForm } from 'components/EditForm/EditForm';
 import { Filter } from 'components/Filter/Filter';
 import { Loader } from 'components/Loader/Loader';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
@@ -19,10 +20,25 @@ const ContactsPage = () => {
   const error = useSelector(selectError);
   const contacts = useSelector(selectContacts);
   const getFilteredContacts = useSelector(selectFilteredContacts);
+  const [userName, setUserName] = useState('');
+  const [userNumber, setUserNumber] = useState('');
+  const [contactId, setContactId] = useState('');
+  const [isModal, setIsModal] = useState(false);
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
+  const isOpenModal = (name, number, id) => {
+    setIsModal(true);
+    setUserName(name);
+    setUserNumber(number);
+    setContactId(id);
+  };
+
+  const isCloseModal = () => {
+    setIsModal(false);
+  };
 
   return (
     <>
@@ -34,11 +50,22 @@ const ContactsPage = () => {
       {contacts.length !== 0 && (
         <div>
           <Filter />
-          {getFilteredContacts.length !== 0 && <ContactList />}
+          {getFilteredContacts.length !== 0 && (
+            <ContactList isOpenModal={isOpenModal} />
+          )}
         </div>
       )}
 
-      {error && <b>{error}</b>}
+      {error && <b style={{ color: 'red' }}>{error}</b>}
+
+      {isModal && (
+        <EditForm
+          name={userName}
+          number={userNumber}
+          contactId={contactId}
+          isCloseModal={isCloseModal}
+        />
+      )}
     </>
   );
 };

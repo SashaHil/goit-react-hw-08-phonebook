@@ -1,9 +1,17 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Form, ErrorMessage, Field, Button, Label } from './ContactForm.styled';
+import {
+  Form,
+  ErrorMessage,
+  Field,
+  Button,
+  Label,
+  AdditionalFormFiled,
+} from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
+import { CgAdd, CgPhone, CgUser } from 'react-icons/cg';
 
 const InputSchema = Yup.object().shape({
   name: Yup.string().required('Must be required'),
@@ -46,7 +54,10 @@ export const ContactForm = () => {
     >
       <Form>
         <Label>
-          Name
+          <AdditionalFormFiled>
+            <CgUser size="18" />
+            Name
+          </AdditionalFormFiled>
           <Field
             type="text"
             name="name"
@@ -60,7 +71,10 @@ export const ContactForm = () => {
         <ErrorMessage name="name" component="div" />
 
         <Label>
-          Number
+          <AdditionalFormFiled>
+            <CgPhone size="18" />
+            Number
+          </AdditionalFormFiled>
           <Field
             type="tel"
             name="number"
@@ -72,7 +86,17 @@ export const ContactForm = () => {
         </Label>
 
         <ErrorMessage name="number" component="div" />
-        <Button type="submit">Add contact</Button>
+        <Button type="submit">
+          Add contact
+          <CgAdd
+            size="18"
+            style={{
+              fill: 'white',
+              verticalAlign: 'middle',
+              marginLeft: '5px',
+            }}
+          />
+        </Button>
       </Form>
     </Formik>
   );

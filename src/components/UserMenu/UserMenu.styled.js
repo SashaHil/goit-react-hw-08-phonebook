@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const LogOutComponent = styled.div`
   @media screen and (min-width: 320px) {
-    margin-left: 5px;
+    margin-left: 57px;
   }
 
   @media screen and (min-width: 768px) {

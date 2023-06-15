@@ -32,12 +32,13 @@ export const Name = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 16px;
   }
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
   font-weight: 650;
 
   color: white;
-
-  text-align: center;
 `;
 
 export const Number = styled.p`
@@ -49,11 +50,13 @@ export const Number = styled.p`
     font-size: 16px;
   }
 
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
   font-weight: 650;
 
   color: white;
-
-  text-align: center;
 `;
 
 export const Button = styled.button`
@@ -69,7 +72,7 @@ export const Button = styled.button`
     font-size: 16px;
   }
 
-  margin-left: auto;
+  margin-left: 5px;
 
   background-color: #2196f3;
   color: #ffffff;
@@ -81,6 +84,10 @@ export const Button = styled.button`
 
   cursor: pointer;
 
+  &:first-child {
+    margin-left: 0;
+  }
+
   &:hover,
   &:focus {
     background-color: #188ce8;
@@ -90,5 +97,9 @@ export const Button = styled.button`
 
 export const Contact = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 30px;
+`;
+
+export const AdditionalField = styled.div`
+  margin-left: auto;
 `;

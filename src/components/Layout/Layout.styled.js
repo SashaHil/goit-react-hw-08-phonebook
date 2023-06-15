@@ -2,15 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   @media screen and (min-width: 320px) {
-    min-width: 250px;
+    min-width: 325px;
     min-height: 400px;
 
     padding: 10px;
   }
 
   @media screen and (min-width: 768px) {
-    min-width: 520px;
-    min-height: 500px;
+    min-width: 620px;
+    min-height: 600px;
 
     padding: 40px 20px;
   }
