@@ -14,8 +14,18 @@ import { addContact } from 'redux/contacts/operations';
 import { CgAdd, CgPhone, CgUser } from 'react-icons/cg';
 
 const InputSchema = Yup.object().shape({
-  name: Yup.string().required('Must be required'),
-  number: Yup.string().required('Must be required'),
+  name: Yup.string()
+    .matches(
+      /^[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+(([' -][a-zA-Zа-яА-ЯґҐєЄіІїЇ ])?[a-zA-Zа-яА-ЯґҐєЄіІїЇ]*)*$/,
+      'Name may contain only letters, apostrophe, dash and spaces'
+    )
+    .required('Name must be required'),
+  number: Yup.string()
+    .matches(
+      /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/,
+      'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
+    )
+    .required('Number must be required'),
 });
 
 export const ContactForm = () => {

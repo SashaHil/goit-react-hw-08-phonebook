@@ -5,12 +5,21 @@ import { CgUser, CgPhone, CgCloseO } from 'react-icons/cg';
 import { Button } from 'components/ContactList/ContactList.styled';
 import { editContact } from 'redux/contacts/operations';
 import { useEffect, useState } from 'react';
-import { BtnClose, Form, Label, Modal, Overlay } from './EditForm.styled';
+import {
+  BtnClose,
+  ErrorMessage,
+  Form,
+  Label,
+  Modal,
+  Overlay,
+} from './EditForm.styled';
 
 export const EditForm = ({ contactId, name, number, isCloseModal }) => {
   const dispatch = useDispatch();
   const [userName, setUserName] = useState(name);
   const [userNumber, setUserNumber] = useState(number);
+  const [nameError, setNameError] = useState('');
+  const [numberError, setNumberError] = useState('');
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
@@ -19,6 +28,20 @@ export const EditForm = ({ contactId, name, number, isCloseModal }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    if (!validateName(userName)) {
+      setNameError(
+        'Name may contain only letters, apostrophe, dash and spaces.'
+      );
+      return;
+    }
+
+    if (!validatePhoneNumber(userNumber)) {
+      setNumberError(
+        'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +'
+      );
+      return;
+    }
 
     dispatch(editContact({ contactId, userName, userNumber }));
 
@@ -43,6 +66,18 @@ export const EditForm = ({ contactId, name, number, isCloseModal }) => {
     }
   };
 
+  const validateName = name => {
+    const validate =
+      /^[a-zA-Zа-яА-ЯґҐєЄіІїЇ]+(([' -][a-zA-Zа-яА-ЯґҐєЄіІїЇ ])?[a-zA-Zа-яА-ЯґҐєЄіІїЇ]*)*$/;
+    return validate.test(name);
+  };
+
+  const validatePhoneNumber = number => {
+    const validate =
+      /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    return validate.test(number);
+  };
+
   return (
     <Overlay onClick={handleCloseBackdrop}>
       <Modal>
@@ -62,6 +97,8 @@ export const EditForm = ({ contactId, name, number, isCloseModal }) => {
               autoComplete="off"
               required
             />
+
+            {nameError && <ErrorMessage>{nameError}</ErrorMessage>}
           </Label>
           <Label>
             <AdditionalLoginRegisterFiled>
@@ -78,6 +115,8 @@ export const EditForm = ({ contactId, name, number, isCloseModal }) => {
               autoComplete="off"
               required
             />
+
+            {numberError && <ErrorMessage>{numberError}</ErrorMessage>}
           </Label>
           <BtnClose type="button" onClick={isCloseModal}>
             <CgCloseO size="18" />

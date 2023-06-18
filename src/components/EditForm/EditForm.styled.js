@@ -89,3 +89,8 @@ export const BtnClose = styled.button`
     color: #188ce8;
   }
 `;
+
+export const ErrorMessage = styled.span`
+  color: red;
+  font-size: 14px;
+`;
